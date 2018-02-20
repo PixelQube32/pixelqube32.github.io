@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+<head>
+<script language="JavaScript" type="text/javascript">
+
+var correct=0, incorrect=0;
+
+function showtally() {
+    document.form.correct.value=correct;
+    document.form.incorrect.value=incorrect;
+}
+
+function choose(chosen) {
+    document.form.choice.value=chosen;
+    flip=Math.round(Math.random());
+    if(flip==0)
+    land="Heads";
+    else
+    land="Tails";
+    document.form.actual.value=land;
+
+    if(chosen==land) {
+        document.form.outcome.value="Correct! You win!";
+        correct+=1;
+    }
+        else {
+        document.form.outcome.value="Incorrect. try again.";
+        incorrect+=1;
+    }
+    showtally();
+}
+
+</script>
+
+</head>
+<body onload=showtally()>
+	
+<form name=form>
+<input type=button value=Heads onclick=choose("Heads")>
+<input type=button value=Tails onclick=choose("Tails")>
+<br>
+<input name=choice>Your choice
+<br>
+<input name=actual>Actual outcome
+<br>
+<input name=outcome>
+<br>
+<input name=correct size=9>
+<input name=incorrect size=9>
+
+</body>
+</html>

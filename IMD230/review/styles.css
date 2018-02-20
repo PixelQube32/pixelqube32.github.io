@@ -1,0 +1,111 @@
+body{
+height: 85%;
+}
+html{
+height: 100%;
+}
+
+.boardmarge {
+margin-top: 210px;
+}
+
+h1{
+color: brown;
+}
+
+#title{
+position: absolute;
+left: 215px;
+top: 0px;
+z-index: 14;
+width: 950px;
+height: 510px;
+background-image:url(titleNew.png);
+background-repeat: no-repeat;
+
+}
+
+#airfield{
+position: absolute;
+left: 0px;
+top: 0px;
+width: 100%;
+height: 400px;
+background-image:url(amelia1.png);
+background-repeat: no-repeat;
+z-index: 1;
+}
+
+#airfield2{
+position: absolute;
+left: 0px;
+top: 309px;
+width: 100%;
+height: auto;
+/*background-image:url("amelia2.png");
+background-repeat: no-repeat;*/
+z-index: 1;
+}
+
+#airfield3{
+position: absolute;
+left: 0px;
+top: 622px;
+width: 1663px;
+height: 30%;
+z-index: 1;
+background-image:url(amelia3.png);
+/*
+border-left-color : #bf6042;
+border-left-style : solid;
+border-left-width : 3px;
+border-right-color : #bf6042;
+border-right-style : solid;
+border-right-width : 3px;
+border-top-color : #bf6042;
+border-top-style : solid;
+border-top-width : 3px;
+border-bottom-color : #bf6042;
+border-bottom-style : solid;
+border-bottom-width : 3px;*/
+
+}
+
+#board{
+position: relative;
+margin-left: auto;
+margin-right: auto;
+top: 110px;
+width: 950px;
+height: 700px;
+z-index: 10;
+/*
+background-image:url("box.png");
+background-repeat: no-repeat;*/
+}
+
+#flash{
+position: absolute;
+left: 60px;
+top: 180px;
+width:auto;
+z-index: 13;
+}
+
+#intro{
+position: absolute;
+left: 92px;
+top: 242px;
+width: 760px;
+height: 410px;
+z-index: 12;
+}
+
+/*#intro{
+position: absolute;
+left: 450px;
+top: 365px;
+width: 760px;
+height: 410px;
+z-index: 12;
+}*/

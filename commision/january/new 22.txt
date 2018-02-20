@@ -1,0 +1,28 @@
+<div id="rcolumn">
+						<div id="call">
+							<p class="fsize"> CALL FOR ACTION </p>
+						</div>
+						<div id="cfabullet">
+						<!-- All links url locations will be left blank with three ... inside replace with full url -->
+							<a href="..."><p class="para3"> Check out our newly revised website at <a href="http://www.collaborationcouncil.org">www.collaboration<br />council.org</a>.</p></a>
+						</div>
+						<div id="cfabullet2">
+						<!-- All links url locations will be left blank with three ... inside replace with full url -->
+							<a href="..."><p class="para3">                                                    </p></a>
+						</div>
+						<div id="cfabullet">
+						<!-- All links url locations will be left blank with three ... inside replace with full url -->
+							<a href="..."><p class="para3">Your donations help us continue to build strong families and communities. You can donate directly by visiting <a href="http://www.collaborationcoucil.org">www.collaborationcouncil.org</a>.</p></a>
+						</div>
+						<br />
+						<div id="cfabullet2">
+						<!-- All links url locations will be left blank with three ... inside replace with full url -->
+							<a href="..."><p class="para3">                                                     </p></a>
+						</div>
+						<br />
+						<br />
+						<div id="cfabullet">
+						<!-- All links url locations will be left blank with three ... inside replace with full url -->
+							<a href="..."><p class="para3">Connect with your county and state elected officials emphasizing the importance of sustaining human services for vulnerable families. Here's our legislative priorities: <a href="http://www.collaborationcouncil.org/publications/2012priorities.docx">Collaboration Council's 2011 Priorities for Children and Families.</a></p></a>
+						</div>
+					</div>

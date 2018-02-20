@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<SCRIPT TYPE="text/javascript">
+	// part a
+	var firstNumber,   // first string entered by user
+	secondNumber,      // second string entered by user
+	number1,           // first number to add
+	number2,           // second number to add
+	sumation;		   // sum of number1 and number2
+	var name,          // should be first string entered for the users name
+	age,               // should be the second string entered for the users age
+
+	// read in first number from user as a string
+	firstNumber = window.prompt("Please enter the first number to be added", "0" );   
+	// read in second number from user as a string
+	secondNumber = window.prompt( "Now I need a second number", "0" );
+	// convert numbers from strings to integers
+	firstNumber = parseInt(firstNumber);
+	number2 = parseInt( secondNumber );
+	// add the numbers
+	sumation = firstNumber + number2;
+	// display the results
+	
+	
+	name = window.prompt( "What is your name?", "0" );
+	age = window.prompt( "How old are you?", "0");
+	
+	document.writeln( "<h2>Hello " + name + " you are " + age + " years old. Your sumation of " + firstNumber + " and " + number2 + " is " + sumation + ". </h2>" );
+
+</SCRIPT>
+
+</head>
+<body>
+<!-- Mark-up goes here... -->
+<h1>Thank you for your patronage. :D Have a nice day ^_^</h1>
+</body>
+</html>

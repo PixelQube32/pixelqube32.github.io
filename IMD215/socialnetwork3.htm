@@ -1,0 +1,303 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+<title>JavaScript - Reading Checkboxes and Radio Buttons</title>
+<link rel="stylesheet" type="text/css" href="style4.css" />
+<script language="JavaScript">
+<!--
+
+var message = "You chose:<br/>\n\n"
+
+function Set_Cookie( name, value, expires, path, domain, secure )
+{
+// set time, it's in milliseconds
+var today = new Date();
+today.setTime( today.getTime() );
+
+/*
+if the expires variable is set, make the correct
+expires time, the current script below will set
+it for x number of days, to make it for hours,
+delete * 24, for minutes, delete * 60 * 24
+*/
+if ( expires )
+{
+expires = expires * 1000 * 60 * 60 * 24;
+}
+var expires_date = new Date( today.getTime() + (expires) );
+
+document.cookie = name + "=" +escape( value ) +
+( ( expires ) ? ";expires=" + expires_date.toGMTString() : "" ) +
+( ( path ) ? ";path=" + path : "" ) +
+( ( domain ) ? ";domain=" + domain : "" ) +
+( ( secure ) ? ";secure" : "" );
+}
+
+function Get_Cookie( check_name ) {
+	// first we'll split this cookie up into name/value pairs
+	// note: document.cookie only returns name=value, not the other components
+	var a_all_cookies = document.cookie.split( ';' );
+	var a_temp_cookie = '';
+	var cookie_name = '';
+	var cookie_value = '';
+	var b_cookie_found = false; // set boolean t/f default f
+
+	for ( i = 0; i < a_all_cookies.length; i++ )
+	{
+		// now we'll split apart each name=value pair
+		a_temp_cookie = a_all_cookies[i].split( '=' );
+
+
+		// and trim left/right whitespace while we're at it
+		cookie_name = a_temp_cookie[0].replace(/^\s+|\s+$/g, '');
+
+		// if the extracted name matches passed check_name
+		if ( cookie_name == check_name )
+		{
+			b_cookie_found = true;
+			// we need to handle case where cookie has no value but exists (no = sign, that is):
+			if ( a_temp_cookie.length > 1 )
+			{
+				cookie_value = unescape( a_temp_cookie[1].replace(/^\s+|\s+$/g, '') );
+			}
+			// note that in cases where cookie is initialized but no value, null is returned
+			return cookie_value;
+			break;
+		}
+		a_temp_cookie = null;
+		cookie_name = '';
+	}
+	if ( !b_cookie_found )
+	{
+		return null;
+	}
+}
+
+// this deletes the cookie when called
+function Delete_Cookie( name, path, domain ) {
+if ( Get_Cookie( name ) ) document.cookie = name + "=" +
+( ( path ) ? ";path=" + path : "") +
+( ( domain ) ? ";domain=" + domain : "" ) +
+";expires=Thu, 01-Jan-1970 00:00:01 GMT";
+}
+
+// check to see if cookie was set and get the value
+
+//get cookies for all but for check boxes and one for radio page two of servey only copythe ifs for the questions involving thos questions page three will have all of them
+
+if ( Get_Cookie('uname') ){
+	// alert( Get_Cookie('uname'))
+	 var msg = "Your Name: " + Get_Cookie('uname');
+message = message + msg + "<br/>\n"; //add cookie value to output message
+	}	
+
+if ( Get_Cookie('social') ){
+	// alert( Get_Cookie('social'))
+	 var msg = "social: " + Get_Cookie('social');
+message = message + msg + "<br/>\n"; //add cookie value to output message
+	}
+	
+if ( Get_Cookie('options0') ){
+	// alert( Get_Cookie('options0')); // uncomment for error checking 
+	 var msg = "options: " + Get_Cookie('options0');
+message = message + msg + "<br/>\n"; //add cookie value to output message
+	}
+
+if ( Get_Cookie('options1') ){
+	// alert( Get_Cookie('options1'))
+	 var msg = "options: " + Get_Cookie('options1');
+message = message + msg + "<br/>\n"; //add cookie value to output message
+	}
+	
+if ( Get_Cookie('options2') ){
+	// alert( Get_Cookie('options2'))
+	 var msg = "options: " + Get_Cookie('options2');
+message = message + msg + "<br/>\n"; //add cookie value to output message
+	}	
+
+if ( Get_Cookie('options3') ){
+	// alert( Get_Cookie('options3'))
+	 var msg = "options: " + Get_Cookie('options3');
+message = message + msg + "<br/>\n"; //add cookie value to output message
+	}
+
+if ( Get_Cookie('options4') ){
+	// alert( Get_Cookie('options4'))
+	 var msg = "options: " + Get_Cookie('options4');
+message = message + msg + "<br/>\n"; //add cookie value to output message
+	}
+	
+if ( Get_Cookie('gossip0') ){
+	// alert( Get_Cookie('gossip0')); // uncomment for error checking 
+	 var msg = "gossip: " + Get_Cookie('gossip0');
+message = message + msg + "<br/>\n"; //add cookie value to output message
+	}
+
+if ( Get_Cookie('gossip1') ){
+	// alert( Get_Cookie('gossip1'))
+	 var msg = "gossip: " + Get_Cookie('gossip1');
+message = message + msg + "<br/>\n"; //add cookie value to output message
+	}
+	
+if ( Get_Cookie('gossip2') ){
+	// alert( Get_Cookie('gossip2'))
+	 var msg = "gossip: " + Get_Cookie('gossip2');
+message = message + msg + "<br/>\n"; //add cookie value to output message
+	}	
+
+if ( Get_Cookie('gossip3') ){
+	// alert( Get_Cookie('gossip3'))
+	 var msg = "gossip: " + Get_Cookie('gossip3');
+message = message + msg + "<br/>\n"; //add cookie value to output message
+	}
+
+if ( Get_Cookie('gossip4') ){
+	// alert( Get_Cookie('gossip4'))
+	 var msg = "gossip4: " + Get_Cookie('gossip4');
+message = message + msg + "<br/>\n"; //add cookie value to output message
+	}
+	
+if ( Get_Cookie('visit') ){
+	// alert( Get_Cookie('visit'))
+	 var msg = "visit: " + Get_Cookie('visit');
+message = message + msg + "<br/>\n"; //add cookie value to output message
+	}
+	
+if ( Get_Cookie('contact0') ){
+	// alert( Get_Cookie('contact0')); // uncomment for error checking 
+	 var msg = "contact: " + Get_Cookie('contact0');
+message = message + msg + "<br/>\n"; //add cookie value to output message
+	}
+
+if ( Get_Cookie('contact1') ){
+	// alert( Get_Cookie('contact1'))
+	 var msg = "contact: " + Get_Cookie('contact1');
+message = message + msg + "<br/>\n"; //add cookie value to output message
+	}
+	
+if ( Get_Cookie('contact2') ){
+	// alert( Get_Cookie('contact2'))
+	 var msg = "contact: " + Get_Cookie('contact2');
+message = message + msg + "<br/>\n"; //add cookie value to output message
+	}	
+
+if ( Get_Cookie('contact3') ){
+	// alert( Get_Cookie('gossip3'))
+	 var msg = "contact: " + Get_Cookie('contact3');
+message = message + msg + "<br/>\n"; //add cookie value to output message
+	}
+
+if ( Get_Cookie('contact4') ){
+	// alert( Get_Cookie('contact4'))
+	 var msg = "contact: " + Get_Cookie('contact4');
+message = message + msg + "<br/>\n"; //add cookie value to output message
+	}
+	
+if ( Get_Cookie('belief') ){
+	// alert( Get_Cookie('belief'))
+	 var msg = "belief: " + Get_Cookie('belief');
+message = message + msg + "<br/>\n"; //add cookie value to output message
+	}
+	
+if ( Get_Cookie('apps0') ){
+	// alert( Get_Cookie('apps0')); // uncomment for error checking 
+	 var msg = "apps: " + Get_Cookie('apps0');
+message = message + msg + "<br/>\n"; //add cookie value to output message
+	}
+
+if ( Get_Cookie('apps1') ){
+	// alert( Get_Cookie('apps1'))
+	 var msg = "apps: " + Get_Cookie('apps1');
+message = message + msg + "<br/>\n"; //add cookie value to output message
+	}
+	
+if ( Get_Cookie('apps2') ){
+	// alert( Get_Cookie('apps2'))
+	 var msg = "apps: " + Get_Cookie('apps2');
+message = message + msg + "<br/>\n"; //add cookie value to output message
+	}	
+
+if ( Get_Cookie('apps3') ){
+	// alert( Get_Cookie('apps3'))
+	 var msg = "apps: " + Get_Cookie('apps3');
+message = message + msg + "<br/>\n"; //add cookie value to output message
+	}
+
+if ( Get_Cookie('apps4') ){
+	// alert( Get_Cookie('apps4'))
+	 var msg = "apps: " + Get_Cookie('apps4');
+message = message + msg + "<br/>\n"; //add cookie value to output message
+	}
+	
+if ( Get_Cookie('recomend') ){
+	// alert( Get_Cookie('recomend'))
+	 var msg = "recomend: " + Get_Cookie('recomend');
+message = message + msg + "<br/>\n"; //add cookie value to output message
+	}
+	
+function changeText(){
+ document.getElementById('boldStuff2').innerHTML = message;
+}
+
+function clearAll(){
+// the parameters for Delete_Cookie:
+// name, path, domain
+// make sure you use the same parameters in Set and Delete Cookie.	
+
+Delete_Cookie('uname', '/', '');
+Delete_Cookie('social', '/', '');
+Delete_Cookie('options0', '/', '');
+Delete_Cookie('options1', '/', '');
+Delete_Cookie('options2', '/', '');
+Delete_Cookie('options3', '/', '');
+Delete_Cookie('options4', '/', '');
+Delete_Cookie('gossip0', '/', '');
+Delete_Cookie('gossip1', '/', '');
+Delete_Cookie('gossip2', '/', '');
+Delete_Cookie('gossip3', '/', '');
+Delete_Cookie('gossip4', '/', '');
+Delete_Cookie('visit', '/', '');
+
+Delete_Cookie('contact0', '/', '');
+Delete_Cookie('contact1', '/', '');
+Delete_Cookie('contact2', '/', '');
+Delete_Cookie('contact3', '/', '');
+Delete_Cookie('contact4', '/', '');
+Delete_Cookie('belief', '/', '');
+Delete_Cookie('apps0', '/', '');
+Delete_Cookie('apps1', '/', '');
+Delete_Cookie('apps2', '/', '');
+Delete_Cookie('apps3', '/', '');
+Delete_Cookie('apps4', '/', '');
+Delete_Cookie('recomend', '/', '');
+
+//reload after clearAll
+window.location.reload();
+}
+	 
+
+//Delete_Cookie('test', '/', '');
+//( Get_Cookie( 'test' ) ) ? alert( Get_Cookie('test')) :
+//alert( 'it is gone');
+
+
+//-->
+</script>
+</head>
+
+<body onLoad="changeText();">
+<!-- the functions that holds all the cookies will load when this page opens --> 
+<div id="socialnn">
+<h2> Results of the Social Networking Servey </h2>
+<hr size="1" noshade="noshade">
+<h3>Your choices from the begining of Survey:</h3>
+<p id='boldStuff2'>Page 1: </p>
+<hr size="1" noshade="noshade">
+<form>
+	<input type="button" name="clear" value="Clear Cookies" onClick="clearAll();"/>
+</form>
+</div>
+</body>
+</html>

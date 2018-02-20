@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+<head>
+<script type="text/javascript">
+
+      var img = new Array();
+   
+      function LoadImages()
+      {  
+         img[1] = new Image();
+         img[2] = new Image();
+         img[3] = new Image();
+         
+         img[1].src = "images/tree1.jpg";
+         img[2].src = "images/tree2.jpg";
+         img[3].src = "images/tree3.jpg";
+         
+         myimg = document.getElementById("myTestImg");
+      }
+
+      var timer = null;
+      var timeout = 2; // in seconds
+      
+      function startTimer()
+      {
+         timer = setTimeout("flipPhoto()", timeout * 1000);
+      }
+
+      var counter = 0;
+                  
+      function flipPhoto()
+      {
+         out = ""; rand = 0; randInt = 0; 
+         
+         rand = Math.random();
+         out += "Random number (0 ... 1): = " + rand + "<br>";
+         
+         max = img.length;
+         
+         randInt = Math.floor(rand*(max));
+         out += "Random Int (0, 1 ... 4 ) = " + randInt + "<br>";
+
+         // make sure pos is between 1 to 3
+         /* 
+         if((randInt > 3) || (randInt < 1))
+         {
+            randInt = 1;
+         }         
+         */
+         
+         // Another other way - since only 1-3 are defined, any array element that is not 1-3 will be undefined
+         // if an undefined element is found, set the index back to one.
+         if(typeof(img[randInt])=='undefined')
+         {
+            randInt = 1;
+         }
+
+         myimg.src = img[randInt].src;
+
+         out += "Length = " + img.length + "<br>";
+
+                  counter++;
+         
+         out += "Count = " + counter + "<br>";
+         
+         outdiv = document.getElementById("outputDiv");
+         outdiv.innerHTML = out;
+        
+         // start timer again
+         clearInterval(timer);
+         startTimer();
+      }
+
+      function stopTimer()
+      {
+         clearTimeout(timer);
+      }
+      
+</script>
+</head>
+<body onload="LoadImages();">
+<!-- Mark-up goes here... -->
+
+  <a href="#" onclick="startTimer(); return false;">Start Timer</a><br>
+   <a href="#" onclick="stopTimer(); return false;">Stop Timer</a><br>
+
+      <img id="myTestImg" src="images/tree1.jpg" border="0">
+
+<div id="outputDiv"></div>
+
+</body>
+</html>

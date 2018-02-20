@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<SCRIPT TYPE="text/javascript">
+	// part a
+	var billTotal,   // first string entered by user
+	tipPercentage,  // second string entered by user
+	decTip,
+	tipIncluded,           // first number to add
+	number2,           // second number to add
+	tip;		   // sum of number1 and number2
+
+	// read in first number from user as a string
+	billTotal = window.prompt("Please enter the bill total. Do not use dollar signs.", "0" );   
+	// read in second number from user as a string
+	tipPercentage = window.prompt( "How much do you want to tip? Please do not use decimals, percentage only.", "0" );
+	// convert numbers from strings to integers
+	billTotal = parseFloat(billTotal);
+	number2 = parseFloat(tipPercentage);
+	// add the numbers
+	decTip = number2 / 100;
+	tip = billTotal * decTip;
+	tipIncluded = billTotal + tip;
+	// display the results
+	
+	
+	document.writeln( "<h2>Hello your bill total is: $" + billTotal.toFixed(2) + ". Your " + tipPercentage + "% tip to give is: $" + tip.toFixed(2) + ". Your total including the tip is: $" + tipIncluded.toFixed(2) + ". </h2>" );
+
+</SCRIPT>
+
+</head>
+<body>
+<!-- Mark-up goes here... -->
+<h1>Thank you for your patronage. :D Have a nice day ^_^ Remember to always clear your private data and cache ^_^.</h1>
+</body>
+</html>

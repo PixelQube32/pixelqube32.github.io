@@ -1,0 +1,192 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+<title>JavaScript - Social Networking Survey</title>
+<link rel="stylesheet" type="text/css" href="style4.css" />
+<script language="JavaScript">
+<!--
+function displayBoxes(frm){
+   var message = "Your answers:\n\n"
+
+       //For each checkbox see if it has been checked, record the value.
+   for (i = 0; i < frm.contact.length; i++)
+      if (frm.contact[i].checked){
+         message = message + frm.contact[i].value + "\n";
+         
+         var cookiename= 'contact'+i; // however many checkboxes are checked, a cookiename will be created
+         
+         // name, value, expires, path, domain, secure
+            Set_Cookie( cookiename, frm.contact[i].value, '', '/', '', '' );
+      }
+   
+   
+     //For each radio button if it is checked get the value and break.
+   for (var i = 0; i < frm.belief.length; i++){
+      if (frm.belief[i].checked){
+         message = message + "\n" + frm.belief[i].value
+         
+         // name, value, expires, path, domain, secure
+            Set_Cookie( 'belief', frm.belief[i].value, '', '/', '', '' );
+            
+         break
+      }
+   }
+   
+   for (i = 0; i < frm.apps.length; i++)
+      if (frm.apps[i].checked){
+         message = message + frm.apps[i].value + "\n";
+         
+         var cookiename= 'apps'+i; // however many checkboxes are checked, a cookiename will be created
+         
+         // name, value, expires, path, domain, secure
+            Set_Cookie( cookiename, frm.apps[i].value, '', '/', '', '' );
+      }
+   
+   
+   for (var i = 0; i < frm.recomend.length; i++){
+      if (frm.recomend[i].checked){
+         message = message + "\n" + frm.recomend[i].value
+         
+         // name, value, expires, path, domain, secure
+            Set_Cookie( 'recomend', frm.recomend[i].value, '', '/', '', '' );
+            
+         break
+      }
+   }
+   
+  
+   
+   
+   //alert(message)
+   document.getElementById('boldContent2').innerHTML = message;
+}
+
+function Set_Cookie( name, value, expires, path, domain, secure )
+{
+// set time, it's in milliseconds
+var today = new Date();
+today.setTime( today.getTime() );
+
+/*
+if the expires variable is set, make the correct
+expires time, the current script below will set
+it for x number of days, to make it for hours,
+delete * 24, for minutes, delete * 60 * 24
+*/
+if ( expires )
+{
+expires = expires * 1000 * 60 * 60 * 24;
+}
+var expires_date = new Date( today.getTime() + (expires) );
+
+document.cookie = name + "=" +escape( value ) +
+( ( expires ) ? ";expires=" + expires_date.toGMTString() : "" ) +
+( ( path ) ? ";path=" + path : "" ) +
+( ( domain ) ? ";domain=" + domain : "" ) +
+( ( secure ) ? ";secure" : "" );
+}
+
+function Get_Cookie( check_name ) {
+	// first we'll split this cookie up into name/value pairs
+	// note: document.cookie only returns name=value, not the other components
+	var a_all_cookies = document.cookie.split( ';' );
+	var a_temp_cookie = '';
+	var cookie_name = '';
+	var cookie_value = '';
+	var b_cookie_found = false; // set boolean t/f default f
+
+	for ( i = 0; i < a_all_cookies.length; i++ )
+	{
+		// now we'll split apart each name=value pair
+		a_temp_cookie = a_all_cookies[i].split( '=' );
+
+
+		// and trim left/right whitespace while we're at it
+		cookie_name = a_temp_cookie[0].replace(/^\s+|\s+$/g, '');
+
+		// if the extracted name matches passed check_name
+		if ( cookie_name == check_name )
+		{
+			b_cookie_found = true;
+			// we need to handle case where cookie has no value but exists (no = sign, that is):
+			if ( a_temp_cookie.length > 1 )
+			{
+				cookie_value = unescape( a_temp_cookie[1].replace(/^\s+|\s+$/g, '') );
+			}
+			// note that in cases where cookie is initialized but no value, null is returned
+			return cookie_value;
+			break;
+		}
+		a_temp_cookie = null;
+		cookie_name = '';
+	}
+	if ( !b_cookie_found )
+	{
+		return null;
+	}
+}
+
+// this deletes the cookie when called
+function Delete_Cookie( name, path, domain ) {
+if ( Get_Cookie( name ) ) document.cookie = name + "=" +
+( ( path ) ? ";path=" + path : "") +
+( ( domain ) ? ";domain=" + domain : "" ) +
+";expires=Thu, 01-Jan-1970 00:00:01 GMT";
+}
+
+//-->
+</script>
+</head>
+<body>
+<div id="socialn">
+<form name="boxes">
+<hr size="1" noshade="noshade">
+<h2>Social Networking Survey </h2>
+<table border="1">
+<tbody><tr>
+  <td>What do you do with your Social Networking site? </td>
+  <td><input name="contact" value=" stay " type="checkbox"> Stay up to date with friends. </td>
+  <td><input name="contact" value=" share " type="checkbox"> Share photos with my friends </td>
+  <td><input name="contact" value=" chat " type="checkbox"> Chat. </td>
+  <td><input name="contact" value=" games " type="checkbox"> play games </td>
+  <td><input name="contact" value=" blog" type="checkbox"> Write blogs. </td>
+</tr>
+<tr>
+  <td>Do you believe that social networking sites benifical for your needs? </td>
+  <td><input name="belief" value=" Yes " type="radio"> Yes </td>
+  <td><input name="belief" value=" No " type="radio"> No </td>
+  <td><input name="belief" value=" maybe " type="radio"> Maybe </td>
+  <td><input name="belief" value=" Not sure " type="radio"> Not Sure </td>
+  <td><input name="belief" value=" Never " type="radio"> Never </td>
+</tr>
+<tr>
+  <td>What applications if any do you use on your social networking site? </td>
+  <td><input name="apps" value=" status " type="checkbox"> Just the simple status stuff </td>
+  <td><input name="apps" value=" fun " type="checkbox"> games </td>
+  <td><input name="apps" value=" blog " type="checkbox"> blogs and discussions </td>
+  <td><input name="apps" value=" relation " type="checkbox"> Keeping in touch with my family </td>
+  <td><input name="apps" value=" work " type="checkbox"> Work related </td>
+</tr>
+<tr>
+  <td>Would you recommend any social networking sites to people who are new or hesitant to join one? </td>
+  <td><input name="recomend" value=" always " type="radio"> Always recomend the best to my friends. </td>
+  <td><input name="recomend" value=" Yes " type="radio"> Yes I would. </td>
+  <td><input name="recomend" value=" No " type="radio"> No, interfering is wrong. </td>
+  <td><input name="recomend" value=" unsure " type="radio"> I'm not sure I should. </td>
+  <td><input name="recomend" value=" lazy " type="radio"> They can do it themselves. </td>
+</tr>
+</tbody></table>
+<p>
+<input value="Continue" onclick="displayBoxes(this.form);" type="button">
+</p>
+<hr size="1" noshade="noshade">
+</form>
+<p id='boldContent2' class="center">These are your answers so far:</p>
+<br/>
+<br/>
+<p class="center"><a href="socialnetwork3.htm">Summary</a></p>
+<hr size="1" noshade="noshade">
+</div>
+</body>
+</html>

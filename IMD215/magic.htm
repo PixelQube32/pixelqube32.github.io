@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<link rel="stylesheet" type="text/css" href="styles3.css" /> 
+  <title>Project 4: Magic The Gathering Show and Hide.</title>
+<script src="jquery-1.4.2.js"></script>
+<script> 
+ 
+ $(document).ready(function() {
+   // jQuery content goes here
+ 
+  // div tag and div ids
+	$("div#fable2").hide();
+	$("div#nurturer2").hide();
+	$("div#shore2").hide();
+	$("div#selkie2").hide();
+
+ 
+  // get the paragraph tag with toggle class and hide it
+	//$("p.toggle").hide();
+ 
+	
+	//when link is moused over, get card text and show it
+	$("div#fable3").mouseover(function(){ 
+		 $("div#fable2").toggle("slow"); 
+		 //can specify slow/medium/fast in quotes or use numbers withput quotes
+		 // 1000 is one second
+		});
+ 
+	$("div#nurturer3").mouseover(function(){ 
+		 $("div#nurturer2").toggle("slow"); 
+		 //can specify slow/medium/fast in quotes or use numbers withput quotes
+		 // 1000 is one second
+		});
+ 
+	$("div#shore3").mouseover(function(){ 
+		 $("div#shore2").toggle("slow"); 
+		 //can specify slow/medium/fast in quotes or use numbers withput quotes
+		 // 1000 is one second
+		});		
+		
+	$("div#selkie3").mouseover(function(){ 
+		 $("div#selkie2").toggle("slow"); 
+		 //can specify slow/medium/fast in quotes or use numbers withput quotes
+		 // 1000 is one second
+		});	
+		
+ });
+ 
+</script>
+ 
+	
+</head>
+<body>
+
+<!--hidden -->
+<div id="cardtext">
+<div id="fable2">
+	<img title="Fable of Wolf and Owl Text" src="fowaotext.png" alt="Text for the Fable of Wolf and Owl card." /></div>
+ 
+<div id="nurturer2">
+	<img title="Nurturer Initiate Text" src="nitext.png" alt="Text for the Nurturer Initiate card." /></div>
+ 
+<div id="shore2">
+<img title="Shorecrasher Mimic Text" src="shoretext.png" alt="Text for the Shorecrasher Mimic card." /></div>
+
+<div id="selkie2">
+<img title="Wistful Selkie Text" src="wstext.png" alt="Text for the Wistful Selkie card." /></div>
+</div>
+
+
+<!--on page images-->
+
+<div id="fourcards">
+<div id="fable">
+	<img title="Fable of Wolf and Owl" src="fableofwolfandowl.png" alt="Fable of Wolf and Owl Magic the Gathering Card." /></div>
+ 
+<div id="nurturer">
+	<img title="Nurturer Initiate" src="nurturerinitiate.png" alt="Nurturer Initiate Magic the Gathering Card." /></div>
+ 
+<div id="shore">
+<img title="Shorecrasher Mimic" src="shorecrashermimic.png" alt="Shorecrasher Mimic Magic the Gathering Card." /></div>
+
+<div id="selkie">
+<img title="Wistful Selkie" src="wistfulselkie.png" alt="Wistful Selkie Magic the Gathering Card." /></div>
+</div>
+
+
+<!-- roll over show and hide -->
+
+<div id="face">
+<div id="fable3">
+	<img title="Fable of Wolf and Owl face" src="fableface.png" alt="face of Fable of Wolf and Owl card." /></div>
+ 
+<div id="nurturer3">
+	<img title="Nurturer Initiate face" src="nurturerface.png" alt="face of Nurturer Initiate card." /></div>
+ 
+<div id="shore3">
+<img title="Shorecrasher Mimic face" src="shorecrasherface.png" alt="face of Shorecrasher Mimic card." /></div>
+
+<div id="selkie3">
+<img title="Wistful Selkie face" src="wistfulselkieface.png" alt="face of Wistful Selkie card." /></div>
+</div>
+
+</body>
+</html>

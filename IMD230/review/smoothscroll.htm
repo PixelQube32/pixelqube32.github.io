@@ -1,0 +1,42 @@
+<html>
+<head>
+
+<title>Loading SWF's into a container</title>
+
+
+<style type="text/css">
+<!--
+body{
+background-color: #ffffff;
+}
+
+div#global { 
+position:absolute;
+left: 50%;
+top: 50%;
+width: 640px;
+height: 480px;
+margin-left: -320px; /* half of the width */
+margin-top: -240px; /* half of the height */
+}
+
+-->	
+</style>
+</head>
+<body>
+
+<div id="global">
+<!--url's used in the movie-->
+<!--text used in the movie-->
+
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" 
+codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="640" height="480">
+  <param name="movie" value="smooth.swf">
+  <param name="quality" value="high">
+  <embed src="smooth.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" 
+  type="application/x-shockwave-flash" width="640" height="480"></embed>
+</object>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<link rel="stylesheet" type="text/css" href="styles2.css" />
+<title> Javascript Form </title>
+</head>
+<body>
+ <script>
+      function checkForm1(myform)
+      {
+         validity = true;
+         email = myform.email.value;
+         password = myform.password.value;
+		 cpassword = myform.cpassword.value;
+         firstName = myform.firstName.value;
+		 lastName = myform.lastName.value;
+		 phone = myform.phone.value;
+		 
+		 alert("First Name: " + firstName);
+		 alert("Last Name: " + lastName);
+         alert("Email: " + email);
+		 alert("Phone: " + phone);
+         alert("Password: " + password);
+		 alert("Confirm Password: " + cpassword);
+		
+		if( (required(firstName) == false) ||
+             (required(lastName) == false) ||
+			 (required(email) == false) ||
+             (required(phone) == false) ||
+             (required(password) == false) ||
+			 (required(cpassword) == false)
+           )
+         {
+            alert("Missing Fields. Please go back and fill them in.");
+            validity = false;
+         }
+
+
+		if(validity)
+         {
+		 
+            if( isAlphaNum(firstName) == false )
+            {
+               alert("First Name is NOT valid");
+               valid = false;
+            }
+
+            if( isAlphaNum(lastName) == false )
+            {
+               alert("Last Name is NOT valid");
+               valid = false;
+            }
+
+			if( (firstName.length >1) && (lastName.length >1))
+			{
+				validity = true;
+			}
+			else {
+				alert("Please Enter a Name That Is Longer Than One Letter.");
+				}
+		 
+			 if (password == cpassword)
+			 {
+				validity = true;
+			 } 
+			 else {
+				alert("Passwords do not match");
+				}
+			 
+			 if(email.length > 10)
+			 {
+				validity = true;
+			 }
+			 else {
+				alert("Please Enter An Email That Is Longer Than Ten Character");
+				}
+			 
+			 if( isNum(phone) == false )
+				{
+				   alert("Phone is NOT valid");
+				   validity = false;
+				} 
+			 
+			 if( isChecked() == false )
+			 {
+				alert("Favorite Movie Genre's Not Selected");
+				validity = false;
+			 }
+			 
+			}
+         return validity;
+      }
+	  
+	  function required(data)
+      {
+         if( (data == null) || 
+             (data.length < 1)
+           )			
+         {
+            return false;
+         } else {
+            return true;
+         }
+      }
+	  
+	  function isAlpha(data)
+		{
+			if(typeof(data) != "string")
+			{
+				data = data.value;
+			}
+         
+			// This contains 0 to 9, a to z ,and A to Z
+			alphaRegEx = /^[a-zA-Z]+$/;
+         
+			if( data.match(alphaRegEx) )
+			{
+				return true;
+			} else {
+				return false;
+			}
+		}
+	  
+	  function isNum(data)
+      {
+         if(typeof(data) != "string")
+         {
+            data = data.value;
+         }
+         
+         // This contains 0 to 9, a to z ,and A to Z
+         numRegEx = /^[0-9]+$/;
+         
+         if( data.match(numRegEx) )
+         {
+            return true;
+         } else {
+            return false;
+         }
+      }
+	  
+	  function isAlphaNum(data)
+      {
+         if( isAlpha(data) ||
+             isNum(data)
+           )
+         {
+            return true;
+         } else {
+            return false;
+         }
+      }
+	  
+	  function isChecked()
+	  {
+		checked = false;
+		for ( var i = 0; i < myform.genre.length; i++)
+		{
+			if (myform.genre[i].checked)
+			{
+				checked = true;
+			}
+		}
+		return checked;
+	  }
+
+
+   </script>
+   <div align="center">
+   <h3 align="center"> Basic Form With Javascript </h3>
+   <form target="formout1" name="myform" method="post" onsubmit="return checkForm1(this);" action="form.php">
+   
+      <table border="0" cellpadding="2" cellspacing="1">
+      <tr>
+         <td>First Name:</td>
+
+         <td><input type="text" name="firstName" /></td>
+      </tr>
+      <tr>
+         <td>Last Name:</td>
+         <td><input type="text" name="lastName" /></td>
+      </tr>
+      <tr valign="top">
+         <td>Age</td>
+         <td><input type="radio" name="age" value="18 - 21">18 - 21<br/>
+
+             <input type="radio" name="age" value="22 - 25">22 - 25<br/>
+             <input type="radio" name="age" value="26 - 29">26 - 29
+         </td>
+      </tr>
+	  <tr>
+		<td>Email:</td>
+		<td><input type="text" name="email" /></td>
+	  </tr>
+      <tr valign="top">
+         <td>Receive<br/>Newsletter</td>
+
+         <td><input type="checkbox" name="newsletter[]" value="email">Email<br/>
+             <input type="checkbox" name="newsletter[]" value="smail">Physical Mail
+         </td>
+      </tr>
+	  <tr>
+		<td>Phone:</td>
+		<td><input type="text" name="phone" /> No dashes, ex. 1231231234</td>
+	  </tr>
+	  
+	  <tr valign="top">
+         <td>Favorite Movie Genre: </td>
+         <td><input type="checkbox" id="genre" name="genre[]" value="Action">Action<br/>
+			 <input type="checkbox" name="genre" value="Adventure">Adventure<br/>
+			 <input type="checkbox" name="genre" value="Comedy">Comedy<br/>
+			 <input type="checkbox" name="genre" value="Crime">Crime<br/>
+			 <input type="checkbox" name="genre" value="Drama">Drama<br/>
+			 <input type="checkbox" name="genre" value="Historical">Historical<br/>
+			 <input type="checkbox" name="genre" value="Horror">Horror<br/>
+			 <input type="checkbox" name="genre" value="Musical">Musical<br/>
+			 <input type="checkbox" name="genre" value="Science Fiction">Science Fiction<br/>
+			 <input type="checkbox" name="genre" value="War">War<br/>
+			 <input type="checkbox" name="genre" value="Western">Western<br/>
+			 <input type="checkbox" name="genre" value="Documentary">Documentary<br/>
+			 <input type="checkbox" name="genre" value="Family">Family<br/>
+			 <input type="checkbox" name="genre" value="Fantasy">Fantasy<br/>
+			 <input type="checkbox" name="genre" value="Mystery">Mystery<br/>
+			 <input type="checkbox" name="genre" value="Romance">Romance<br/>
+			 <input type="checkbox" name="genre" value="Sport">Sport<br/>
+			 <input type="checkbox" name="genre" value="Suspence">Suspence<br/>
+			 <input type="checkbox" name="genre" value="Thriller">Thriller<br/>
+         </td>
+      </tr>
+	  
+      <tr>
+         <td>Password:</td>
+         <td><input type="password" name="password" /></td>
+      </tr>
+      <tr>
+         <td>Confirm Password:</td>
+         <td><input type="password" name="cpassword" /></td>
+      </tr>
+
+
+      </table>
+
+      
+      <br/>
+      <input type="submit" name="submit" value="Send" /><br/>
+      <input type="reset" value="reset" /><br/>
+      
+   </form>
+   </div>
+
+   
+   <iframe name="formout1" width="100%"></iframe>
+</body>
+</html>

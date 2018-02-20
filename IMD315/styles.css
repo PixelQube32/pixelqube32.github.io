@@ -1,0 +1,759 @@
+body{
+font-family: Arial, Calibri, Myriad Pro, Pointy Solid;
+font-size: 16px;
+background-color: tan;
+background-image: url("images/wood3.png");
+}
+
+img{
+border: none;
+}
+
+h1{
+font-size: 18px;
+}
+
+a{
+text-decoration: none;
+color: #000000;
+}
+
+.text{
+text-indent: 35px;
+}
+
+.text2{
+text-indent: 35px;
+margin-top: 40px;
+}
+
+
+
+.align{
+padding-right: 5px;
+float: left;
+}
+
+.tip {
+    color: #fff;
+	width: auto;
+	font-size: 0.813em;
+    background: #003366; /*#1d1d1d*/
+    display:none; /*--Hides by default--*/
+    padding:10px;
+    position:absolute;    
+	z-index:1000;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+#shini{
+width: 200px;
+height: 200px;
+float: left;
+padding-right: 10px;
+padding-bottom: 10px;
+margin-bottom: 60px;
+}
+
+
+#podcon{
+width: 100px;
+height: 105px;
+background-image: url("images/ipodapp.png");
+background-repeat: no-repeat;
+margin-bottom: 15px;
+}
+
+#podcite{
+width:375px;
+height: 80px;
+margin-left: 110px;
+margin-top: -95px;
+margin-bottom: 5px;
+/*border-left-color : #bf6042;
+border-left-style : solid;
+border-left-width : 3px;
+border-right-color : #bf6042;
+border-right-style : solid;
+border-right-width : 3px;
+border-top-color : #bf6042;
+border-top-style : solid;
+border-top-width : 3px;
+border-bottom-color : #bf6042;
+border-bottom-style : solid;
+border-bottom-width : 3px;*/
+}
+
+#podcite2{
+width:375px;
+height: 80px;
+margin-left: 110px;
+margin-top: -90px;
+margin-bottom: 15px;
+}
+
+#podcite3{
+width:375px;
+height: 80px;
+margin-left: 110px;
+margin-top: -95px;
+margin-bottom: 15px;
+}
+
+#podcite4{
+width:375px;
+height: 80px;
+margin-left: 110px;
+margin-top: -95px;
+margin-bottom: 15px;
+}
+
+#podcite5{
+width:375px;
+height: 80px;
+margin-left: 110px;
+margin-top: -85px;
+margin-bottom: 5px;
+}
+
+#podcite6{
+width:375px;
+height: 80px;
+margin-left: 110px;
+margin-top: -95px;
+margin-bottom:15px;
+}
+
+#podcite7{
+width:375px;
+height: 80px;
+margin-left: 110px;
+margin-top: -85px;
+margin-bottom: 5px;
+}
+
+#podcite8{
+width:375px;
+height: 80px;
+margin-left: 110px;
+margin-top: -95px;
+margin-bottom: 15px;
+}
+
+#podcite9{
+width:375px;
+height: 80px;
+margin-left: 110px;
+margin-top: -95px;
+margin-bottom: 15px;
+}
+
+#podcite10{
+width:375px;
+height: 80px;
+margin-left: 110px;
+margin-top: -95px;
+margin-bottom: 15px;
+}
+
+#podcite11{
+width:375px;
+height: 80px;
+margin-left: 110px;
+margin-top: -95px;
+margin-bottom: 15px;
+}
+
+#podcite12{
+width:375px;
+height: 80px;
+margin-left: 110px;
+margin-top: -95px;
+margin-bottom: 15px;
+}
+
+#podcite13{
+width:375px;
+height: 80px;
+margin-left: 110px;
+margin-top: -95px;
+margin-bottom: 15px;
+}
+
+#podcite14{
+width:375px;
+height: 80px;
+margin-left: 110px;
+margin-top: -95px;
+margin-bottom: 15px;
+}
+
+#podcite15{
+width:375px;
+height: 80px;
+margin-left: 110px;
+margin-top: -95px;
+margin-bottom: 15px;
+}
+
+#podcite16{
+width:375px;
+height: 80px;
+margin-left: 110px;
+margin-top: -95px;
+margin-bottom: 15px;
+}
+
+#podcite17{
+width:375px;
+height: 80px;
+margin-left: 110px;
+margin-top: -95px;
+margin-bottom: 15px;
+}
+
+#podcite18{
+width:375px;
+height: 80px;
+margin-left: 110px;
+margin-top: -95px;
+margin-bottom: 15px;
+}
+
+#podcite19{
+width:375px;
+height: 80px;
+margin-left: 110px;
+margin-top: -95px;
+margin-bottom: 15px;
+}
+
+#brush{
+width: 100px;
+height: 105px;
+background-image: url("images/micronbrush.png");
+margin-bottom: 15px;
+}
+
+#citebrush{
+width: 375px;
+height: 80px;
+margin-left: 110px;
+margin-top: -100px;
+padding-bottom: 20px;
+}
+
+#hand{
+width: 100px;
+height: 105px;
+}
+
+#hand2{
+width: 100px;
+height: 105px;
+}
+
+#hand3{
+width: 100px;
+height: 105px;
+}
+
+#hand4{
+width: 100px;
+height: 105px;
+}
+
+#hand5{
+width: 100px;
+height: 105px;
+}
+
+#hand6{
+width: 100px;
+height: 105px;
+}
+
+#hand7{
+width: 100px;
+height: 105px;
+}
+
+#hand8{
+width: 100px;
+height: 105px;
+}
+
+#hand9{
+width: 100px;
+height: 105px;
+}
+
+#hand10{
+width: 100px;
+height: 105px;
+}
+
+#hand11{
+width: 100px;
+height: 105px;
+}
+
+#hand12{
+width: 100px;
+height: 105px;
+}
+
+#hand{
+width: 100px;
+height: 105px;
+}
+
+#hand13{
+width: 100px;
+height: 105px;
+}
+
+#hand14{
+width: 100px;
+height: 105px;
+}
+
+#hand15{
+width: 100px;
+height: 105px;
+}
+
+#hand16{
+width: 100px;
+height: 105px;
+}
+
+#hand17{
+width: 100px;
+height: 105px;
+}
+
+#hand18{
+width: 100px;
+height: 105px;
+}
+
+#arrow{
+margin-top: -75px;
+width: 30px;
+height: 36px;
+margin-left: 470px;
+background-image: url("images/arrow2.png");
+}
+
+#woodtable2{
+position: relative;
+margin-top: -10px;
+margin-bottom: 0px;
+width: 956px;
+height: 1025px;
+
+margin-left: auto;
+margin-right: auto;
+z-index: 1;
+}
+
+#woodtable{
+position: relative;
+margin-top: -10px;
+margin-bottom: 0px;
+width: 956px;
+height: 1478px;
+
+margin-left: auto;
+margin-right: auto;
+z-index: 1;
+}
+
+#coffee{
+top: 0px;
+margin-left: -110px;
+width: 261px;
+height: 216px;
+background-image:url("images/coffee.png");
+
+}
+
+#micron{
+position: relative;
+top: -214px;
+left: 668px;
+width: 391px;
+height: 103px;
+margin-bottom: -100px;
+background-image:url("images/micron.png");
+z-index: 3;
+}
+
+#ipod{
+margin-top: 450px;
+margin-left: 0px;
+width: 418px;
+height: 495px;
+margin-left: -300px;
+background-image: url("images/ipodcorner.png");
+
+}
+
+#pad{
+margin-top: -1000px;
+margin-left: 137px;
+width: 645px;
+height: 1297px;
+background-image: url("images/sketchpad.png");
+
+}
+
+#pad3{
+margin-top: -1000px;
+margin-left: 137px;
+width: 645px;
+height: 2667px;
+background-image: url("images/sketchpad3.png");
+background-repeat: no-repeat;
+
+}
+
+#bluemouse{
+position: absolute;
+margin-top: -400px;
+margin-left: 880px;
+width: 225px;
+height: 274px;
+background-image: url("images/bluemouse.png");
+z-index: 4;
+
+}
+
+#chip{
+position: absolute;
+margin-top: -920px;
+margin-left: 762px; /* 676*/
+width: 52px;/*140*/
+height: 16px;
+background-image:url("images/blog2.png");
+z-index: 2;
+}
+
+#white{
+position: absolute;
+width: 40px;
+height: 91px;
+top: 248px;
+right: 180px;
+
+z-index: 1;
+}
+
+#white2{
+position: absolute;
+width: 20px;
+height: 91px;
+top: 358px;
+right: 200px;
+
+z-index:1;
+}
+
+#white3{
+position: absolute;
+width: 20px;
+height: 91px;
+top: 468px;
+right: 200px;
+
+z-index: 1;
+}
+
+#plate{
+position: absolute;
+margin-top: -810px;
+margin-left: 762px;
+width: 52px;/*140*/
+height: 106px;
+background-image: url("images/about2.png");
+z-index: 2;
+}
+
+#credit{
+position: absolute;
+margin-top: -705px;
+margin-left: 756px;
+width: 65px;
+height: 120px;
+background-image: url("images/creditcards.png");
+z-index: 2;
+}
+
+#socimedia{
+position: absolute;
+margin-top: -1140px;
+margin-left: 170px;
+width: 495px;
+height: 168px;
+background-image: url("images/socimedia2.png");
+z-index: 5;
+}
+
+#blog{
+margin-top: -20px;
+width: 500px;
+height: 80px;
+font-size: 2em;
+color: brown;
+font-family: Calibri;
+}
+
+#content{
+margin-top: 45px;
+margin-left: 85px;
+margin-right: 60 px;
+padding-top: 20px;
+width: 545px;
+height: 751px;
+
+
+}
+
+#article{
+margin-top: -40px;
+width: 500px;
+height: auto;
+font-size: 1em;
+color: black;
+font-family: Calibri;
+}
+
+#pad2{
+margin-top: -1000px;
+margin-left: 137px;
+width: 645px;
+height: 800px;
+background-image: url("images/sketchpad.png");
+
+}
+
+#clickposter{
+padding-right: 20px;
+padding-bottom: 10px;
+width: 192px;
+height: 286px;
+background-image: url("images/click.png");
+background-repeat: no-repeat;
+float: left;
+}
+
+#arrow2{
+margin-top: -68px;
+width: 30px;
+height: 36px;
+margin-left: 470px;
+background-image: url("images/arrow2.png");
+}
+
+#blog2{
+
+width: 500px;
+height: 40px;
+font-size: 2em;
+color: brown;
+font-family: Calibri;
+
+}
+
+#article2{
+margin-top: -20px;
+width: 500px;
+height: auto;
+font-size: 1em;
+color: black;
+font-family: Calibri;
+
+}
+
+#clickposter2{
+margin-top: 20px;
+padding-right: 20px;
+padding-bottom: 10px;
+width: 192px;
+height: 286px;
+background-image: url("images/stardust.png");
+background-repeat: no-repeat;
+float: left;
+}
+
+#arrow3{
+margin-top: -68px;
+width: 30px;
+height: 36px;
+margin-left: 470px;
+background-image: url("images/arrow2.png");
+}
+
+#blog3{
+width: 500px;
+height: 80px;
+font-size: 2em;
+color: brown;
+font-family: Calibri;
+
+}
+
+#article3{
+margin-top: -40px;
+width: 500px;
+height: auto;
+font-size: 1em;
+color: black;
+font-family: Calibri;
+
+
+}
+
+#clickposter3{
+margin-top: 5px;
+padding-right: 20px;
+padding-bottom: 10px;
+width: 192px;
+height: 286px;
+background-image: url("images/chan.png");
+background-repeat: no-repeat;
+float: left;
+}
+
+#arrow4{
+margin-top: -68px;
+width: 30px;
+height: 36px;
+margin-left: 470px;
+background-image: url("images/arrow2.png");
+}
+
+#blog4{
+width: 500px;
+height: 80px;
+font-size: 2em;
+color: brown;
+font-family: Calibri;
+}
+
+#article4{
+margin-top: -40px;
+width: 500px;
+height: auto;
+font-size: 1em;
+color: black;
+font-family: Calibri;
+}
+
+#clickposter4{
+margin-top: 8px;
+padding-right: 20px;
+padding-bottom: 10px;
+width: 192px;
+height: 286px;
+background-image: url("images/ordinary.png");
+background-repeat: no-repeat;
+float: left;
+}
+
+#psp{
+position: absolute;
+width: 379px; /*378*/
+height: 304px;
+margin-left:784px;
+margin-top: -100px;
+background-image:url("images/psp.png");
+z-index: 10;
+}
+
+#psp2{
+position: absolute;
+width: 172px; /*378*/
+height: 254px;
+margin-left:784px;
+margin-top: -170px;
+background-image:url("imasges/psp.png");
+z-index: 10;
+}
+
+#sam{
+position: absolute;
+width: 157px;
+height: 106px;
+margin-left: 800px;
+margin-top: -130px;
+background-image: url("images/sam.png");
+z-index: 11;
+}
+
+#sam2{
+position: absolute;
+width: 157px;
+height: 106px;
+margin-top: 25px;
+margin-left: -50px;
+background-image: url("images/sam.png");
+z-index: 11;
+}
+
+#click2{
+position: absolute;
+width: 405px;
+height: 47px;
+margin-top: 2px;
+background-image: url("images/click2.png");
+z-index: 12;
+}
+
+#abouthead{
+position: absolute;
+width: 405px;
+height: 47px;
+margin-top: 20px;
+background-image: url("images/abouthead.png");
+z-index: 12;
+}
+
+#credits{
+position: absolute;
+width: 405px;
+height: 47px;
+margin-top: 20px;
+background-image: url("images/credits.png");
+z-index: 12;
+}
+
+#click3{
+position: absolute;
+width: 405px;
+height: 47px;
+margin-top: 17px;
+background-image: url("images/stardust2.png");
+z-index: 12;
+}
+
+#click4{
+position: absolute;
+width: 405px;
+height: 47px;
+margin-top: 30px;
+background-image: url("images/spy2.png");
+z-index: 12;
+}
+
+#click5{
+position: absolute;
+width: 405px;
+height: 47px;
+margin-top: 30px;
+background-image: url("images/nof.png");
+z-index: 12;
+}

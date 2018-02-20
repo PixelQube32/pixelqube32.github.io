@@ -1,0 +1,4 @@
+<h3>Did You Know?</h3>
+					<p>Did you know strong families help protect children from a life of crime? We need to stop risky behaviors from escalating. We need to prevent future involvement with police. We need to support families who are struggling with poverty, and isolation created by cultural/language barriers. We are doing just that by wrapping community services around children and their families, thanks to funding from the Governor's Office for Crime Control and Prevention. To learn more: <a href="mailto:patty.brown@collaborationcouncil.org">Send an Email to Patty Brown.</a></p>
+					
+					<p class="dash">---------------------------------------------------------------------------------------------------------------------------</p>

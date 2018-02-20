@@ -1,0 +1,58 @@
+<html>
+
+<body>
+   <script>
+      function checkForm1(myform)
+      {
+         valid = false;
+         email = myform.email.value;
+         password = myform.password.value;
+         
+         alert("email: " + email);
+         alert("password: " + password);
+         
+         if( (email.length > 1) &&
+             (password.length > 1)
+           )
+         {
+            valid = true;
+         }
+         
+         if(valid)
+         {
+            alert("Form is valid");
+         } else {
+            alert("Form is NOT valid");
+         }
+         
+         
+         return valid;
+      }
+   </script>
+
+   <div align="center">
+   <form target="formout2" name="myform2" method="post"
+      onsubmit="return checkForm1(this);" action="form.php">
+      
+      <table border="0" cellpadding="2" cellspacing="1">
+      <tr>
+         <td>email</td>
+
+         <td><input type="text" name="email" /></td>
+      </tr>
+      <tr>
+         <td>password</td>
+         <td><input type="password" name="password" /></td>
+
+      </tr>
+      </table>
+      
+      <br/>
+      <input type="submit" name="submit" value="send" />
+   </form>
+   </div>
+
+   
+   <iframe name="formout2" width="100%"></iframe>
+</body>
+</html>

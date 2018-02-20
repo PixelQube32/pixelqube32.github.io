@@ -1,0 +1,59 @@
+var formatLayout: TextFormat=new TextFormat();
+
+var movingText:Boolean = false;
+
+var smoothText:String;
+
+var fontUsed:Font=new Arial();
+formatLayout.font=fontUsed.fontName;
+formatLayout.size=18;
+formatLayout.leftMargin=30;
+formatLayout.rightMargin=30;
+
+var dialogBox: TextField=new TextField;
+addChild(dialogBox)
+dialogBox.defaultTextFormat=formatLayout;
+
+dialogBox.y=40;
+dialogBox.x=178;
+dialogBox.width=388;
+dialogBox.height=210;
+dialogBox.text="Amelia Mary Earhart, born July 24, 1897, missing July 2, 1937, declared legally dead January 5, 1939, was a noted American aviation pioneer and author. Earhart was the first woman to receive the Distinguished Flying Cross, awarded for becoming the first aviatrix to fly solo across the Atlantic Ocean. She set many other records, wrote best-selling books about her flying experiences and was instrumental in the formation of The Ninety-Nines, an organization for female pilots. Earhart joined the faculty of the world-famous Purdue University aviation department in 1935 as a visiting faculty member to counsel women on careers and help inspire others with her love for aviation. She was also a member of the National Woman's Party, and an early supporter of the Equal Rights Amendment."
+dialogBox.wordWrap=true;
+dialogBox.multiline=true;
+dialogBox.border=false;
+dialogBox.background=false;
+//dialogBox.backgroundColor=0xffffff;
+dialogBox.textColor=0xC2A89D;
+//dialogBox.alpha = 0.6;
+
+up_btn.addEventListener(MouseEvent.MOUSE_DOWN, scrollUp);
+function scrollUp (event:Event):void
+{
+	movingText = true;
+	smoothText = "up";
+	dialogBox.scrollV -=1;
+}
+
+down_btn.addEventListener(MouseEvent.MOUSE_DOWN, scrollDown);
+function scrollDown (event:Event):void
+{
+	movingText = true;
+	smoothText = "down";
+	dialogBox.scrollV +=1;
+}
+
+stage.addEventListener(MouseEvent.MOUSE_UP, stopScroll);
+stage.addEventListener(Event.ENTER_FRAME, smoothScroll);
+
+function stopScroll (event:MouseEvent):void{
+	movingText=false;
+}
+
+function smoothScroll(event:Event):void{
+	if (movingText){
+		if(smoothText == "down"){
+			dialogBox.scrollV +=1;
+		}else if (smoothText == "up"){
+			dialogBox.scrollV -=1;
+		}}}

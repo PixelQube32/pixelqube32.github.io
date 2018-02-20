@@ -1,0 +1,267 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<link rel="stylesheet" type="text/css" href="styles.css" />
+		<title>PokeQuiz: Test Your Knowledge of the last 4 Generations of Pokemon!</title>
+	</head>
+
+	<body>
+		<div id="quizback">
+			<div id="cast"></div>
+			<div id="cast2"></div>
+			<div id="quizbox">
+				<div id="img">
+					<img src="omanyte.png" alt="Omanyte" align="right" class="padding"/>
+					<img src="jiggly.png" alt="Jiggleypuff" align="right" class="padding" />
+					<img src="snover.png" alt="Snover" align="right" class="padding" />
+					<img src="level.png" alt="level ball" align="right" class="padding"/>
+				</div>
+		<script language="JavaScript">
+
+			function quiz(form) {
+			//all for number of questions
+			var i = 0
+			var totalq = 12
+
+			document.total.outof.value = totalq
+
+			var result1=document.form1.answer1.selectedIndex
+			var result2=document.form2.answer2.selectedIndex
+			var result3=document.form3.answer3.selectedIndex
+			var result4=document.form4.answer4.selectedIndex
+			var result5=document.form5.answer5.selectedIndex
+			var result6=document.form6.answer6.selectedIndex
+			var result7=document.form7.answer7.selectedIndex
+			var result8=document.form8.answer8.selectedIndex
+			var result9=document.form9.answer9.selectedIndex
+			var result10=document.form10.answer10.selectedIndex
+			var result11=document.form11.answer11.selectedIndex
+			var result12=document.form12.answer12.selectedIndex
+					
+			if (result1==0){
+				alert("Answer Question 1");}
+			if (result2==0){
+				alert("Answer Question 2");}
+			if (result3==0){
+				alert("Answer Question 3");}
+			if (result4==0){
+				alert("Answer Question 4");}
+			if (result5==0){
+				alert("Answer Question 5");}
+			if (result6==0){
+				alert("Answer Question 6");}
+			if (result7==0){
+				alert("Answer Question 7");}
+			if (result8==0){
+				alert("Answer Question 8");}
+			if (result9==0){
+				alert("Answer Question 9");}
+			if (result10==0){
+				alert("Answer Question 10");}
+			if (result11==0){
+				alert("Answer Question 11");}
+			if (result12==0){
+				alert("Answer Question 12");}
+				
+			//correct answers and totalling the scores and what to do for wrong answers
+			else {
+				if (result1==2){i++} // In form1 the correct answer is the second OPTION VALUE
+				if (result2==1){i++} // In form2 the correct answer is the first OPTION VALUE
+				if (result3==3){i++} // In form3 the correct answer is the third OPTION VALUE
+				if (result4==1){i++} // In form4 the correct answer is the first option value
+				if (result5==2){i++} // In form5 the correct answer is the second option value
+				if (result6==3){i++} // In form6 the correct answer is the third option value
+				if (result7==2){i++} // Answer for form7 is second choice
+				if (result8==1){i++} // In form8 the correct answer is the first option value
+				if (result9==3){i++} // in form9 the correct answer is the third option value
+				if (result10==4){i++} // in form10 the correct answer is the fourth option value
+				if (result11==1){i++} // in form11 the correct answer is the first option value
+				if (result12==1){i++}
+				
+				document.total.score.value = i
+				var per =  ((i / 12) * 100) // (change the number "3" to the total number of questions)
+				document.total.percent.value = per.toFixed(2); 
+
+				if (result1 != 2) document.form1.check1.checked = "yes";
+				else document.form1.check1.checked = false;
+									
+				if (result2 != 1) document.form2.check2.checked = "yes";
+				else document.form2.check2.checked = false;
+									
+				if (result3 != 3) document.form3.check3.checked = "yes"; //if wrong a checked will be placed and yes makes it visible.
+				else document.form3.check3.checked = false; //if correct checked will not happen because checked is for wrong answers.
+				
+				if (result4 != 1) document.form4.check4.checked = "yes";
+				else document.form4.check4.checked = false;
+				
+				if (result5 != 2) document.form5.check5.checked = "yes";
+				else document.form5.check5.checked = false;
+				
+				if (result6 != 3) document.form6.check6.checked = "yes";
+				else document.form6.check6.checked = false;
+				
+				if (result7 != 2) document.form7.check7.checked = "yes";
+				else document.form7.check7.checked = false;
+				
+				if (result8 != 1) document.form8.check8.checked = "yes";
+				else document.form8.check8.checked = false;
+				
+				if (result9 != 3) document.form9.check9.checked = "yes";
+				else document.form9.check9.checked = false;
+				
+				if (result10 != 4) document.form10.check10.checked = "yes";
+				else document.form10.check10.checked = false;
+				
+				if (result11 != 1) document.form11.check11.checked = "yes";
+				else document.form11.check11.checked = false;
+				
+				if (result12 != 1) document.form12.check12.checked = "yes";
+				else document.form12.check12.checked = false;
+				}
+			}
+			//-->
+		</script>
+				<div id="instruct">
+					<p align="center"><font class="title" size="4" face="Verdana, Helvetica"><strong>Castform's Pokequiz</strong></font> </p>
+
+					<p align="left"><font class="title2" size="3" face="Verdana, Helvetica">Choose an answer to the best of your knowledge from each of the pull-down menus. <strong>Do not</strong> submit your quiz until you have answered <strong>all</strong> the questions. Wrong answers will be marked with a check mark in the left check box.</font></p>
+				</div>
+					<blockquote>
+
+							
+						<div id="blockquiz">
+							<form name="form1">
+								<p><font size="2" face="Verdana, Helvetica"><input type="checkbox" name="check1"> 1. What type of fossil does Omanyte resurect from? <select name="answer1" size="1">
+									<option selected value="0">-- Solution List -- </option>
+									<option value="1">Dome Fossil </option>
+									<option value="2">Helix Fossil </option>
+									<option value="3">Root Fossil </option>
+									<option value="4">Armor Fossil </option>
+									<option value="5">Claw Fossil </option>
+									<option value="6">Old Amber </option>
+									<option value="7">Skull Fossil </option>
+								</select> </font></p>
+							</form>
+							<form name="form2">
+								<p><font size="2" face="Verdana, Helvetica"><input type="checkbox" name="check2"> 2. Arceus has the ability Multitype wich allows him to change his type based on the type of the plate he is holding. How many plates are there?  <select name="answer2" size="1">
+									<option selected value="0">-- Solution List -- </option>
+									<option value="1"> 16 </option>
+									<option value="2"> 20 </option>
+									<option value="3"> 10 </option>
+								</select> </font></p>
+							</form>
+							<form name="form3">
+								<p><font size="2" face="Verdana, Helvetica"><input type="checkbox" name="check3"> 3. Castform was created by the  <select name="answer3" size="1">
+									<option selected value="0">-- Solution List -- </option>
+									<option value="1">Museum in Oreburg City to help by clearing the weather</option>
+									<option value="2">Radio Tower in Goldenrod City to help with reception</option>
+									<option value="3">Weather Institute to help/control/read the weather</option>
+								</select> and has four forms, Sunny Day, Hail, Heavy Rain, Sandstorm. Even though Sandstorm has no graphical representation.</font></p>
+							</form>
+							<form name="form4">
+								<p><font size="2" face="Verdana, Helvetica"><input type="checkbox" name="check4"> 4. In Heart Gold and Soul Silver, what is at the Lake of Rage?  <select name="answer4" size="1">
+									<option selected value="0">-- Solution List -- </option>
+									<option value="1">Shiny Red Gyarados</option>
+									<option value="2">Magikarp</option>
+									<option value="3">Water Stone</option>
+								</select></font></p>
+							</form>
+							<form name="form5">
+								<p><font size="2" face="Verdana, Helvetica"><input type="checkbox" name="check5"> 5. In Heart Gold/Soul Silver there are 7 types of Apricorns, what color apricorn makes a Level Ball and what does it do? <select name="answer5" size="1">
+									<option selected value="0">-- Solution List -- </option>
+									<option value="1">Pink, greater catch rate when used against an opponent of the opposite gender</option>
+									<option value="2">Red, the higher the level you are the better the catch rate</option>
+									<option value="3">Black, higher weight better catch rate</option>
+								</select></font></p>
+							</form>
+							<form name="form6">
+							<p><font size="2" face="Verdana, Helvetica"><input type="checkbox" name="check6"> 6. Who was Ash's first pokemon and what happened that first day? <select name="answer6" size="1">
+									<option selected value="0">-- Solution List -- </option>
+									<option value="1">Squrtle, stole his hat</option>
+									<option value="2">Charmander, set his butt on fire</option>
+									<option value="3">Pikachu, give him a nasty electric shock.
+									<option value="4">Bulbasur, gave him whiplash</option>
+								</select></font></p>
+							</form>
+								<form name="form7">
+							<p><font size="2" face="Verdana, Helvetica"><input type="checkbox" name="check7"> 7. Early on in the series, Jigglypuff likes to sing but has a bad temper for people who fall asleep during her performances. What does she do in responce? <select name="answer7" size="1">
+									<option selected value="0">-- Solution List -- </option>
+									<option value="1">Run away crying</option>
+									<option value="2">Draw on their faces with the marker in her microphone</option>
+									<option value="3">Gets Wigglytuff to punch them in the gut to wake them up</option>
+									<option value="4">Have Wigglytuff pose them as statues</option>
+								</select></font></p>
+							</form>
+							<form name="form8">
+							<p><font size="2" face="Verdana, Helvetica"><input type="checkbox" name="check8"> 8. Snorunt can evolve into Galalie as well as Froslass. There are both female Galalie and Froslass. What are the requirements to get a Froslass? <select name="answer8" size="1">
+									<option selected value="0">-- Solution List -- </option>
+									<option value="1">Female Snorunt and a Dawn Stone</option>
+									<option value="2">Female Snorunt and a Reaper Cloth</option>
+									<option value="3">Female Snorunt and a Dusk Stone</option>
+								</select></font></p>
+							</form>
+							<form name="form9">
+							<p><font size="2" face="Verdana, Helvetica"><input type="checkbox" name="check9"> 9. Eevee has an unstable genetic structure, how many forms can eevee evolve into by the end of the 4th generation? <select name="answer9" size="1">
+									<option selected value="0">-- Solution List -- </option>
+									<option value="1">8</option>
+									<option value="2">6</option>
+									<option value="3">7</option>
+								</select></font></p>
+							</form>
+							<form name="form10" class="color">
+							<p><font size="2" face="Verdana, Helvetica"><input type="checkbox" name="check10"> 10. In the movie that Ash was turned to stone due to an attack from both Mew and Mewtwo, what eventually happened that turned ash back into flesh? <select name="answer10" size="1">
+									<option selected value="0">-- Solution List -- </option>
+									<option value="1">A move from from a pokemon</option>
+									<option value="2">Mew coming to the rescue</option>
+									<option value="3">Pikachu and the other pokemon taking down Mewtwo</option>
+									<option value="4">The tears of both the real and clone pokemon coming together to heal him</option>
+								</select></font></p>
+							</form>
+							<form name="form11" class="color">
+							<p><font size="2" face="Verdana, Helvetica"><input type="checkbox" name="check11"> 11. At what level does Snover learn Razor Leaf? <select name="answer11" size="1">
+									<option selected value="0">-- Solution List -- </option>
+									<option value="1">5</option>
+									<option value="2">9</option>
+									<option value="3">26</option>
+								</select></font></p>
+							</form>
+							<form name="form12" class="color">
+							<p><font size="2" face="Verdana, Helvetica"><input type="checkbox" name="check12"> 12. There are more than one set of Team Rocket members that go after Ash and the gang, who are in the origional group? <select name="answer12" size="1">
+									<option selected value="0">-- Solution List -- </option>
+									<option value="1">Jessie, James, Meowth</option>
+									<option value="2">Bonnie, Clyde, Luxray</option>
+									<option value="3">Cassidy, Butch Mightyena</option>
+								</select></font></p>
+							</form>
+							
+							
+							
+							<p><font size="2" face="Verdana, Helvetica"><br>
+							<br>
+							</font></p>
+								<form name="total" class="color">
+									<p><font size="2" face="Verdana, Helvetica"><input type="button" value="Send" onclick="quiz()" class="input"> <input type="button" value="Try again" onclick="parent.location=&quot;javascript:location.reload()&quot;" class="input">
+									</font></p>
+									<p>&nbsp;</p>
+									<hr>
+
+									<p><font size="2" face="Verdana, Helvetica">You have <input type="text" size="5" name="score" class="input"> right answers out of <input type="text" size="5" name="outof" value="" class="input">. <br>
+									<br>
+									Score: <input type="text" size="9" name="percent" class="input"> %<br>
+									</font></p>
+									<hr>
+
+								</form>
+					</div>
+					</blockquote>
+
+				<p>&nbsp;</p>
+			</div>
+			<div id="cast3"></div>
+			<div id="cast4"></div>
+		</div>
+	</body>
+</html>

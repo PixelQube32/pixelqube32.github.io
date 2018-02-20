@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+
+	<head> 
+		<!--Metatags-->
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" /> 
+		<meta name="author" content="David Yuan Quach"/>
+		<!--Title-->
+		<title>Sociedia: A blog about Society and Mass Media</title> 
+		<link rel="stylesheet" type="text/css" href="styles.css" />
+		<script type="text/javascript" src="jquery-1.4.4.min.js"></script> 
+		<script type="text/javascript">
+			$(document).ready(function() {
+				
+				//Tooltips
+				var tip;
+				$(".tip_trigger").hover(function(){
+
+					//Caching the tooltip and removing it from container; then appending it to the body
+					tip = $(this).find('.tip').remove();
+					$('body').append(tip);
+
+					tip.show(); //Show tooltip
+
+				}, function() {
+
+					tip.hide().remove(); //Hide and remove tooltip appended to the body
+					$(this).append(tip); //Return the tooltip to its original position
+
+				}).mousemove(function(e) {
+				//console.log(e.pageX)
+					  var mousex = e.pageX + 20; //Get X coodrinates
+					  var mousey = e.pageY + 20; //Get Y coordinates
+					  var tipWidth = tip.width(); //Find width of tooltip
+					  var tipHeight = tip.height(); //Find height of tooltip
+
+					 //Distance of element from the right edge of viewport
+					  var tipVisX = $(window).width() - (mousex + tipWidth);
+					  var tipVisY = $(window).height() - (mousey + tipHeight);
+
+					if ( tipVisX < 20 ) { //If tooltip exceeds the X coordinate of viewport
+						mousex = e.pageX - tipWidth - 20;
+						$(this).find('.tip').css({  top: mousey, left: mousex });
+					} if ( tipVisY < 20 ) { //If tooltip exceeds the Y coordinate of viewport
+						mousey = e.pageY - tipHeight - 20;
+						tip.css({  top: mousey, left: mousex });
+					} else {
+						tip.css({  top: mousey, left: mousex });
+					}
+				});
+
+
+			
+			   // put all your jQuery goodness in here.
+			   // Do not instantiate elements until the document has finished loading
+			 
+				//jQuery Easy Accordion 
+				$('.movieclick:not(:first)').hide();
+			 
+				$('.movieclick:first').show();
+			 
+				$('.movieheader:first').addClass('active');	
+				$('.movieclick:first').addClass('content-active');
+			 
+				$('.movieheader').click(function () {
+					$('.movieclick:visible').slideUp().prev().removeClass('active');
+					$('.movieclick:visible').removeClass('content-active');
+					$(this).addClass('active').next().slideDown();
+					$('.movieclick').addClass('content-active');
+			 
+				});
+				
+				$('#chip').hide();
+				$('#plate').hide();
+				$('#credit').hide();
+				
+				$('#white').hover(function () {
+					$('#chip').fadeIn('fast');
+				});
+				
+				$('#white2').hover(function () {
+					$('#plate').fadeIn('slow');
+				});
+				
+				$('#white3').hover(function () {
+					$('#credit').fadeIn('slow');
+				});
+				
+				
+				
+			});
+		</script>
+	</head>
+	
+	<body>
+		<div id="woodtable">
+			
+			<div id="coffee">
+			</div>
+			<div id="micron">
+			</div>
+			<div id="sam">
+			</div>
+			<div id="sam2">
+			</div>
+			<div id="ipod">
+				<a href="#" class="tip_trigger"><strong><img src="images/ipodcorner.png" /></strong><span class="tip">This is an Ipod!!!!</span></a>
+			</div>
+			<div id="bluemouse">
+			</div>
+			<div id="psp">
+			</div>
+			<div id="socimedia">
+			</div>		
+			
+			<div id="chip">
+				<a href="index.htm"><img src="images/blog2.png" alt="link to blog page" /></a>
+			</div>
+			<div id="white">
+				<img src="images/whitehover.png" alt="hover for tabs" />
+			</div>
+			<div id="plate">
+				<a href="about.htm"><img src="images/about2.png" alt="link to about page" /></a>
+			</div>
+			<div id="white2">
+				<img src="images/whitehover.png" alt="hover for tabs" />
+			</div>
+			<div id="credit">
+				<a href="credit.htm"><img src="images/creditcards.png" alt="ling to credits page" /></a>
+			</div>
+			<div id="white3">
+				<img src="images/whitehover.png" alt="hover for tabs" />
+			</div>
+
+			<div id="pad">
+				<div id="content">
+					<div id="click2">
+					</div>
+					<div id="blog" class="movieheader">
+						<p class="space"> &nbsp </p>
+						<div id="arrow">
+						</div>
+					</div>
+					<div id="article" class="movieclick">
+						<div id="clickposter">
+						</div>
+						<h1>Control </h1>
+						<p class="text"><i>Click</i>, is a fantasy/comedy/drama film about an overworked architect who neglects his family and misses most of his life when he mysteriously gets a hold of a universal remote and has to learn about truly enjoying and living life.  Now who hasn’t ever wanted a universal and I mean, truly <a href="#" class="tip_trigger"><strong>universal remote</strong><span class="tip"> Usually this type of control <br />is for only devices linked <br />to the remote, however this <br />movie marries the remote idea <br />with the idea of controling our lives.</span></a>for their lives? The said remote in the movie allows Michael to skip over and control the movements of his life to his will. At first this was a great idea untill the remote starts to act on its own.  </p>
+						<h1>Life Message </h1> 
+						<p class="text">The life lesson of the movie is that if we are so cought up in we we are doing we will miss out on the more meaning ful moments in life as well as our family and love.  This message is a great step forward in our media to help not only raise our children in a better society but also to show them what is really important in life. What better way to teach this lesson than by <a href="#" class="tip_trigger"><strong>the angel of death? </strong><span class="tip"><img src="images/morty.png" class="align"/>Character in the movie who <br />runs a repair station in <br />the Beyond section of Bed <br />Bath & Beyond. The Character is portrayed by <br />actor Christopher Walken.</span></a>Morty gave Michael the remote free of charge to show him the error of his ways. The universal remote and the characters do a great job in showing us this lesson though the remote's usage as well as the possible reasons for Morty to open a beyond section at the local Bed Bath & Beyond store to pass on the remote. </p>
+						<h1>Apreciation</h1>
+						<p class="text">During the course of the movie Michael uses the remote to pause conversations, skip unpleasant moments and fast forward to good times. Though this, the remote <a href="#" class="tip_trigger"><strong>learns his actions </strong><span class="tip">Adaptive Learning</span></a>and does it without his consent after a few uses.  This shows that socialization has convinced us that a daily grind of life like Michael’s are normal.  In doing so this makes us believe that if this is the quote, “average American family,” and becomes what what our own family is, we will be normal while at the same time we can claim to not be influenced. This movie and many others similar to it have a formula that shows us a sample of a perceived normal family life and something that changes the family by the end with a life lesson.</p>
+					</div>
+					<div id="click3">
+					</div>
+					<div id="blog2" class="movieheader">
+						<p> &nbsp </p>
+							<div id="arrow2">
+							<img src="images/arrow2.png" alt="click to read article" />
+							</div>
+					</div>
+					<div id="article2" class="movieclick">
+						<br />
+						<div id="clickposter2">
+						</div>
+						<h1>Love</h1>
+						<p class="text"><i>Stardust</i> is a fantasy film based on Neil Gaiman’s novel of the same name.  Though this movie is categorized as fantasy, it can also be considered in the romance genre. Honestly, having a star studded cast and being narrated by <a href="#" class="tip_trigger"><strong>Ian McKellen</strong><span class="tip"><img src="images/ianmckellen.png" class="align"/></span></a> there is no better way to tell a romance than through fantasy.  In the story, the main character, Tristan Thorne has fallen for a woman who could honestly care less and he tells her after seeing a star fall beyond the wall that he will retrieve the star for her if she will marry him.  </p>
+						<h1>Journey</h1>
+						<p class="text"> After a lengthy talk with his father gives Tristan a <a href="#" class="tip_trigger"><strong>Babylon Candle </strong><span class="tip"><img src="images/candle.png" class="align"/></span></a>that transports him to the star which turns out to be a woman by the name of Yvaine.  Through various characters back stories, the themes of the movie comes though. In Stormhold, the king is dying and in a genius method of passing his kingdom down to his children he tosses his ruby into the sky and says whoever retrieves the ruby first becomes king. This being fantasy, the ruby hits a <a href="#" class="tip_trigger">star<span class="tip">Yvaine</span></a> in the sky and both fall to the ground.  The ruby ends up as the necklace that Yvaine wears. </p>
+						<h1>Drama</h1>
+						<p class="text">Earlier on, three witches learn of Yvaine’s arrival and plan to eat her heart to regain their youth and their magic. Tristan initially wants Yvaine so he can marry his love back home.  The king’s children want the ruby to become gain control of the throne. These all bring us to the theme of greed.  This reflects on our society which lends us to perceive the world with a materialistic view.  However, as Tristan’s journey continues and he becomes friends with Yvaine and gets to know her, he falls in love with her and brings a sample of her hair as proof to his girl back home that he has moved on only to find the hair turning to actual stardust as soon as he passes through the wall between the two worlds.  Every character has a reason for greed but in the end love is shown to be stronger.</p>
+					</div>
+					<div id="click4">
+					</div>
+					<div id="blog3" class="movieheader">
+						<p> &nbsp </p>
+							<div id="arrow3">
+								<img src="images/arrow2.png" alt="click to read article" />
+							</div>
+					</div>
+					<div id="article3" class="movieclick">
+						<div id="clickposter3">
+						</div>
+						<h1>Secrets</h1>
+						<p class="text"><i>The Spy Next Door</i> is a spy comedy, and family film with love and action spread throughout the film.  For this film, the running themes are about secrecy, honesty, and family.  In the film, Bob Ho is a Chinese super spy on loan to <a href="#" class="tip_trigger"><strong>CIA</strong><span class="tip">Central Inteligence Agency</span></a>.  He decides to retire after his latest mission so he could be with his girlfriend and next-door neighbor Gillian.  Gillian’s father is ill and she decides to go home to take care of him, Bob offers to take care of her kids while she’s gone.  This kind of action socially would show a loving behavior in attempt to establish a family again as Gillian felt <a href="#" class="tip_trigger"><strong>betrayed</strong><span class="tip">This character dynamic is interesting <br /> due to Bob being a spy and <br /> Gillian's ex kept a lot of secrets <br /> from her.</span></a>. 
+						<h1>History</h1>
+						<p class="text">A portrayal of a loving and close knit family as Gillian has gives us viewers a window into the lives some of us have in real life. This allows a broader view of life with more exposure to diverse situations of life.  The film even goes further in show the family aspect of the film by showing how badly they don’t want Bob as their new dad due to not wanting to loose their mother to someone else and possibly being hurt again.  <a href="#" class="tip_trigger"><strong>Farren and Ian</strong><span class="tip">Gillian's oldest daughter and son.</span></a> sneak into Bob’s house to get some dirt on him so they can force him to leave. Ian downloads a top secret formula from Bob’s computer. </p>
+						<h1>Confrontation</h1>
+						<p class="text">This triggers a whole sequence of events leading Bob’s archenemy to him and the people Bob cares about.  Eventually Gillian finds out the truth and tries to move on without him only to find out just how important Bob has become to them.  Society has socialized us into perceiving honesty and secrets in such strong emotions that when broken, wheather or not intentionally, ends up scarring those we love. This is even more painful when the secrets are publicly exposed. Everyone had secrets which led each down a path. My takeaway from this film was that all secrets need to be dealt with be it slow or immediate.  Keeping secrets will gradually eat ones soul way. </p>
+					</div>
+					<div id="click5">
+					</div>
+					<div id="blog4" class="movieheader">
+						<p> &nbsp </p>
+							<div id="arrow4">
+								<img src="images/arrow2.png" alt="click to read article" />
+							</div>
+					</div>
+					<div id="article4" class="movieclick">
+					
+						<a href="#" class="tip_trigger">
+						<strong><div id="clickposter4">
+						</div></strong><span class="tip">Only on ABC </span></a>
+						
+						<h1>Justice</h1>
+						<p class="text"><i>No Ordinary Family</i> is a one hour sci-fi drama American television series produced by ABC studios.  No Ordinary Family is a weekly series about the <a href="#" class="tip_trigger"><strong>Powell family</strong><span class="tip">Cast: Michael Chiklis, Julie Benz, Kay Panabaker <br />, Jimmy Bennett, Autumn Reeser, Romany Malco, <br /> and Stephen Collins.</span></a> as they go though life drifting apart and how they attempt to fix their broken family as well as the addition of suddenly gaining super powers. First off, the series really lends well to sociology in that the Powells, used to be a very close nit family, but as time passed reality and modern life caught up to them.</p>
+						<h1>Family</h1>
+						<p class="text">Stephanie became extremely successful at her carrer, being so focused to provide for her family that she was hardly ever at home being with her family over the years. Jim felt that as his kids and wife grew apart from him he felt that he wasn’t strong enough to be there for them and hold his family together. Daphne is shown as girl in school who is the most oblivious to how people are and how people treat her. The Powell family’s situation minus the super powers, gives us a window into an example of how society and modern life affects a family over time. Throughout the series, Jim and Stephanie attend marriage counseling and the show explores how their powers are allowing them to work on bringing the family together.  Jim works as a sketch artist at a police station, where at least once a day he is taunted by a cop for being an artist and can’t really go out and catch the bad guys like a real cop. This added on to his other issues leads to Jim becoming super strong and partially invulnerable, giving him a chance to be the hero he has always wanted to be. </p>
+						<h1>Adapting</h1>
+						<p class="text">Society has told us a man needs to be strong and a provider and can not be weak in anyway. Stephanie feels that she never has enough time to do all the thing she needs to do so her abilities mimic's the <a href="#" class="tip_trigger"><strong>Flash</strong><span class="tip"><img src="images/flash.png" class="align" />Super Speed  <br />and hyper metabolism.</span></a>.  Having missed out on most her kid’s younger years she struggles to be apart of their lives now. Society has shown that a working mother is a good thing but some in this series it seems to also hint at Stephanie being a stay-at-home mom.  JJ, at the beginning, is about to be held back to remedial math and feels that he isn’t worth much when he becomes a super genius and has to learn to not only hold back his powers, but also who he really is and what is truly important in life. This series has a similar themes to <a href="#" class="tip_trigger"><strong><i>The Incredibles</i></strong><span class="tip"><img src="images/incredibles.png" class="align"/>"A family of undercover <br />superheroes, while trying to live the <br />quiet suburban life, are forced into action <br />to save the world."<br /><br /><br /><br /> <br />http://www.imdb.com/title/tt0317705/</span></a>.</p>
+					</div>
+					<br />
+					<br />
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

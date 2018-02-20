@@ -1,0 +1,43 @@
+body{
+background-color: #336633;
+color: #ccffff;
+}
+
+#socialn{
+position:absolute;
+margin-left: 200px;
+margin-right: 200px;
+z-index: 1;
+}
+
+#socialnn{
+position: absolute;
+top: 200px;
+margin-left: 500px;
+z-index: 1;
+}
+
+h2{
+font-size: 30px;
+}
+
+td{
+text-align: center;
+}
+
+input{
+text-align: center;
+}
+
+.center{
+text-align: center;
+}
+
+.name{
+color: #336699;
+font-style: bold;
+}
+
+/*.blink{
+text-decoration: blink;
+}*/

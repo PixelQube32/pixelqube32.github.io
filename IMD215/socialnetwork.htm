@@ -1,0 +1,200 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+<title>JavaScript - Social Networking Survey</title>
+<link rel="stylesheet" type="text/css" href="style4.css" />
+<script language="JavaScript">
+<!--
+function showBoxes(frm){
+   var message = "Your answers:\n\n"
+
+   
+   if(frm.uName.value !=""){
+         message = message + "\n Your name: " + frm.uName.value
+         
+         // name, value, expires, path, domain, secure
+            Set_Cookie( 'uname', frm.uName.value, '', '/', '', '' );   	
+   }
+   
+   
+   //For each radio button if it is checked get the value and break.
+   for (var i = 0; i < frm.UseSoci.length; i++){
+      if (frm.UseSoci[i].checked){
+         message = message + "\n" + frm.UseSoci[i].value
+         
+         // name, value, expires, path, domain, secure
+            Set_Cookie( 'social', frm.UseSoci[i].value, '', '/', '', '' );
+            
+         break
+      }
+   }
+    
+	   //For each checkbox see if it has been checked, record the value.
+   for (i = 0; i < frm.options.length; i++)
+      if (frm.options[i].checked){
+         message = message + frm.options[i].value + "\n";
+         
+         var cookiename= 'options'+i; // however many checkboxes are checked, a cookiename will be created
+         
+         // name, value, expires, path, domain, secure
+            Set_Cookie( cookiename, frm.options[i].value, '', '/', '', '' );
+      }
+	
+	for (i = 0; i < frm.gossip.length; i++)
+      if (frm.gossip[i].checked){
+         message = message + frm.gossip[i].value + "\n";
+         
+         var cookiename= 'gossip'+i; // however many checkboxes are checked, a cookiename will be created
+         
+         // name, value, expires, path, domain, secure
+            Set_Cookie( cookiename, frm.gossip[i].value, '', '/', '', '' );
+      }
+	
+	
+	for (var i = 0; i < frm.visit.length; i++){
+      if (frm.visit[i].checked){
+         message = message + "\n" + frm.visit[i].value
+         
+         // name, value, expires, path, domain, secure
+            Set_Cookie( 'visit', frm.visit[i].value, '', '/', '', '' );
+            
+         break
+      }
+   }
+  
+  
+   	
+   //alert(message)
+   document.getElementById('boldStuff2').innerHTML = message;
+}
+
+function Set_Cookie( name, value, expires, path, domain, secure )
+{
+// set time, it's in milliseconds
+var today = new Date();
+today.setTime( today.getTime() );
+
+/*
+if the expires variable is set, make the correct
+expires time, the current script below will set
+it for x number of days, to make it for hours,
+delete * 24, for minutes, delete * 60 * 24
+*/
+if ( expires )
+{
+expires = expires * 1000 * 60 * 60 * 24;
+}
+var expires_date = new Date( today.getTime() + (expires) );
+
+document.cookie = name + "=" +escape( value ) +
+( ( expires ) ? ";expires=" + expires_date.toGMTString() : "" ) +
+( ( path ) ? ";path=" + path : "" ) +
+( ( domain ) ? ";domain=" + domain : "" ) +
+( ( secure ) ? ";secure" : "" );
+}
+
+function Get_Cookie( check_name ) {
+	// first we'll split this cookie up into name/value pairs
+	// note: document.cookie only returns name=value, not the other components
+	var a_all_cookies = document.cookie.split( ';' );
+	var a_temp_cookie = '';
+	var cookie_name = '';
+	var cookie_value = '';
+	var b_cookie_found = false; // set boolean t/f default f
+
+	for ( i = 0; i < a_all_cookies.length; i++ )
+	{
+		// now we'll split apart each name=value pair
+		a_temp_cookie = a_all_cookies[i].split( '=' );
+
+
+		// and trim left/right whitespace while we're at it
+		cookie_name = a_temp_cookie[0].replace(/^\s+|\s+$/g, '');
+
+		// if the extracted name matches passed check_name
+		if ( cookie_name == check_name )
+		{
+			b_cookie_found = true;
+			// we need to handle case where cookie has no value but exists (no = sign, that is):
+			if ( a_temp_cookie.length > 1 )
+			{
+				cookie_value = unescape( a_temp_cookie[1].replace(/^\s+|\s+$/g, '') );
+			}
+			// note that in cases where cookie is initialized but no value, null is returned
+			return cookie_value;
+			break;
+		}
+		a_temp_cookie = null;
+		cookie_name = '';
+	}
+	if ( !b_cookie_found )
+	{
+		return null;
+	}
+}
+
+// this deletes the cookie when called
+function Delete_Cookie( name, path, domain ) {
+if ( Get_Cookie( name ) ) document.cookie = name + "=" +
+( ( path ) ? ";path=" + path : "") +
+( ( domain ) ? ";domain=" + domain : "" ) +
+";expires=Thu, 01-Jan-1970 00:00:01 GMT";
+}
+
+//-->
+</script>
+</head>
+<body>
+<div id="socialn">
+<form name="boxes">
+<hr size="1" noshade="noshade"/>
+<h2>Social Networking Survey </h2>
+Your Name: <input class="name" type="text" name="uName" value="" /><br/><br/>
+<table border="1">
+<tbody><tr>
+  <td>Do you use free Social Networking Sites? </td>
+  <td><input name="UseSoci" value=" Yes " type="radio"> Yes, I love them! </td>
+  <td><input name="UseSoci" value=" No " type="radio"> No way! Social Networking Sites are evil! </td>
+  <td><input name="UseSoci" value=" Maybe " type="radio"> Ehh Maybe. </td>
+  <td><input name="UseSoci" value=" Don't Care " type="radio"> Don't Care. </td>
+  <td><input name="UseSoci" value=" unknown " type="radio"> I don't know what a social networking site is. </td>
+</tr>
+<tr>
+  <td>Which Social Networking Sites Do You Use?</td>
+  <td><input name="options" value=" Facebook " type="checkbox">  Facebook  </td>
+  <td><input name="options" value=" MySpace " type="checkbox"> MySpace </td>
+  <td><input name="options" value=" Gaia Online " type="checkbox"> Gaia Online </td>
+  <td><input name="options" value=" LinkedIn " type="checkbox"> LinkedIn </td>
+  <td><input name="options" value=" Crunchy Roll " type="checkbox"> Crunchy Roll </td>
+</tr>
+<tr>
+  <td>How did you hear about the social networking sites you use? </td>
+  <td><input name="gossip" value=" Friend " type="checkbox"> Friend </td>
+  <td><input name="gossip" value=" Surf " type="checkbox"> Surfing the Web </td>
+  <td><input name="gossip" value=" Event " type="checkbox"> Event </td>
+  <td><input name="gossip" value=" Gift " type="checkbox"> Gift </td>
+  <td><input name="gossip" value=" Advertise " type="checkbox"> Advertisment </td>
+</tr>
+<tr>
+  <td>How often do you visit social networking sites? </td>
+  <td><input name="visit" value=" everyday " type="radio"> Everyday </td>
+  <td><input name="visit" value=" times " type="radio"> Not as often as I like </td>
+  <td><input name="visit" value=" rarely " type="radio">  Rarely  </td>
+  <td><input name="visit" value=" none " type="radio"> Not anymore </td>
+  <td><input name="visit" value=" addicted " type="radio"> Addicted to them </td>
+</tr>
+</tbody></table>
+<p>
+<input value="Continue" onclick="showBoxes(this.form);" type="button">
+</p>
+<hr size="1" noshade="noshade"/>
+</form>
+<p id='boldStuff2' class="center">These are your answers so far:</p>
+<br/>
+<br/>
+<p class="center"><a href="socialnetwork2.htm" >Part Two</a></p>
+<hr size="1" noshade="noshade"/>
+</div>
+</body>
+</html>

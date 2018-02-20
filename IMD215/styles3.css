@@ -1,0 +1,173 @@
+body{
+background-color: #1293c8;
+}
+
+h1{
+font-family: Bell Gothic Std;
+font-size: 34px;
+font-weight: bold;
+text-align: center;
+color: #18611f;
+}
+
+#fourcards{
+position: relative;
+margin-left: auto;
+margin-right: auto;
+top: -50px;
+width: 540px;
+height: 750px;
+z-index: 1;
+}
+
+#fable{
+position: aboslute;
+left: 0px;
+top: 0px;
+width: 265px;
+height: 370px;
+z-index: 2;
+}
+
+#nurturer{
+position: absolute;
+left: 275px;
+top: 0px;
+width: 265px;
+height: 370px;
+z-index: 2;
+}
+
+#shore{
+position: absolute;
+left: 0px;
+top: 380px;
+width: 265px;
+height: 370px;
+z-index: 2;
+}
+
+#selkie{
+position: absolute;
+left: 275px;
+top: 380px;
+width: 265px;
+height: 370px;
+z-index: 2;
+}
+
+#face{
+position: relative;
+margin-left: auto;
+margin-right: auto;
+top: -757px;
+width: 494px;
+height: 544px;
+z-index: 3;
+/*border-left-color : #bf6042;
+border-left-style : solid;
+border-left-width : 3px;
+border-right-color : #bf6042;
+border-right-style : solid;
+border-right-width : 3px;
+border-top-color : #bf6042;
+border-top-style : solid;
+border-top-width : 3px;
+border-bottom-color : #bf6042;
+border-bottom-style : solid;
+border-bottom-width : 3px;*/
+}
+
+#fable3{
+position: aboslute;
+left:0px;
+top:0px;
+width: 222px;
+height: 163px;
+z-index:4;
+}
+
+#nurturer3{
+position: absolute;
+left: 274px;
+top: 0px;
+width: 224px;
+height: 164px;
+z-index: 4;
+}
+
+#shore3{
+position: absolute;
+left: 0px;
+top: 380px;
+width: 222px;
+height: 163px;
+z-index: 4;
+}
+
+#selkie3{
+position: absolute;
+left: 275px;
+top: 378px;
+width: 222px;
+height: 166px;
+z-index: 4;
+}
+
+#cardtext{
+position: relative;
+margin-left: auto;
+margin-right: auto;
+top: 286px;
+width: 494px;
+height: 105px;
+z-index: 5;
+/*border-left-color : #bf6042;
+border-left-style : solid;
+border-left-width : 3px;
+border-right-color : #bf6042;
+border-right-style : solid;
+border-right-width : 3px;
+border-top-color : #bf6042;
+border-top-style : solid;
+border-top-width : 3px;
+border-bottom-color : #bf6042;
+border-bottom-style : solid;
+border-bottom-width : 3px;*/
+}
+
+#fable2{
+position: absolute;
+left: -1px;
+top: 1px;
+width: 220px;
+height: 101px;
+z-index: 6;
+}
+
+#nurturer2{
+position: absolute;
+left: 274px;
+top: 1px;
+width: 220px;
+height: 101px;
+z-index: 6;
+}
+
+#shore2{
+position: absolute;
+left: -2px;
+top: 381px;
+width: 220px;
+height: 101px;
+z-index: 6;
+}
+
+#selkie2{
+position: absolute;
+left: 274px;
+top: 381px;
+width: 220px;
+height: 101px;
+z-index: 6;
+}
